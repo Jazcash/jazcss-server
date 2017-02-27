@@ -20,7 +20,7 @@ const del          = require("del");
 const hbLayouts    = require("handlebars-layouts");
 const hbHelpers    = require("handlebars-helpers");
 const browserSync  = require("browser-sync").create();
-const nodemon      = require('gulp-nodemon');
+const nodemon      = require("gulp-nodemon");
 const packageFile  = require("./package");
 
 gulp.task("styles", function(){
@@ -106,11 +106,12 @@ gulp.task("browsersync", ["nodemon"], function(){
 	gulp.start("watch");
 });
 
-gulp.task('nodemon', function (cb) {
+gulp.task("nodemon", function (cb) {
 	var started = false;
 	return nodemon({
-		script: 'app.js'
-	}).on('start', function () {
+		script: "app.js",
+		ext: "hbs"
+	}).on("start", function () {
 		if (!started) {
 			cb();
 			started = true;
