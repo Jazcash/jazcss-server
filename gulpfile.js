@@ -96,11 +96,11 @@ gulp.task("fonts", function(){
 
 gulp.task("browsersync", ["nodemon"], function(){
 	browserSync.init(null, {
-		proxy: "http://localhost:3001",
+		proxy: "http://localhost:4000",
 		files: ["src/build"],
-		port: 3002,
+		port: 4001,
 		ui: {
-			port: 3003
+			port: 4002
 		}
 	});
 	gulp.start("watch");

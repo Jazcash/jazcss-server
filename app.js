@@ -11,6 +11,6 @@ app.ws('/', function(ws, req) {
 	console.log('socket', req.testing);
 });
 
-app.listen("3001", function () {
-	console.log("Express server listening on port 3001");
+app.listen("4000", function () {
+	console.log("Express server listening on port 4000");
 });
